@@ -6,7 +6,8 @@ logger = logging.getLogger(__name__)
 class Cmd(object):
     def __init__(self, command):
         self.command = command
-        self.std_out, self.std_err = ''
+        self.std_out = ''
+        self.std_err = ''
 
     def run(self, realtime=False, suppress_warning=False):
         proc = subprocess.Popen(
